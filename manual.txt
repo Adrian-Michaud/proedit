@@ -1,0 +1,32 @@
+
+Features:
+
+Available for all Platforms/Operating systems
+Small single self contained executable for instant loading.
+Spell Checker with over 205,000 words.
+Integrated Compile/Build shell with automatic error/warning bookmarking.
+Unlimited Undo
+Unlimited Number of open files
+Edit both Text and Hex files. 
+Auto session save/restore
+Source Code Reformatter (ProEdit Style, Sun C-Style, BSD Style)
+Built in sorting capability (Alphabetically, Numerically, Binary)
+Auto Indenting capability
+Source code colorizing
+Global search/replace
+Easy Macro record/playbacks
+Built in Calculator
+Word wrap capability
+Extensive Input history for quickly recalling previous operations.
+Global Bookmarks
+File browser with filename completion.
+Block and Row/Column text selection capability.
+Built in file Merge with bookmarked colorized differences
+File checkout shell for read only files under source control.
+Uses system clipboard(s) for easy copy/pasting with other applications.
+Built in clock
+Insert and Overstrike editing mode
+Built in help system
+Display Special whitespace characters
+Operator Matching
+

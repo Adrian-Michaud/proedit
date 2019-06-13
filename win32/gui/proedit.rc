@@ -1,0 +1,284 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_PROEDIT_GUI         ICON                    "..\proedit.ico"
+IDI_SMALL               ICON                    "..\small.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_PROEDIT_GUI MENU 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "Open...\tALT+E",              ID_FILE_OPEN40002
+        MENUITEM "Close\tALT+Q",                ID_FILE_CLOSE40003
+        MENUITEM "Save\tALT+W",                 ID_FILE_SAVE40004
+        MENUITEM "Rename\tALT+T",               ID_FILE_RENAME
+        MENUITEM SEPARATOR
+        MENUITEM "Exit\tALT+X",                 IDM_EXIT
+    END
+    POPUP "Edit"
+    BEGIN
+        MENUITEM "Undo\tALT+U or CTRL+Z",       ID_EDIT_UNDO40008
+        MENUITEM SEPARATOR
+        MENUITEM "Cut\tDEL",                    ID_EDIT_CUT40009
+        MENUITEM "Copy\tINS or CTRL+C",         ID_EDIT_COPY40010
+        MENUITEM "Paste\tINS or CTRL+V",        ID_EDIT_PASTE40011
+        MENUITEM "Block Select\tALT+V",         ID_EDIT_BLOCKSELECTALT
+        MENUITEM "Line Select\tALT+C",          ID_EDIT_LINESELECTALT
+        MENUITEM SEPARATOR
+        MENUITEM "Delete Line\tALT+D",          ID_EDIT_DELETELINEALT
+        MENUITEM "Erase to EOL\tALT+K",         ID_EDIT_ERASETOEOLALT
+    END
+    POPUP "Search"
+    BEGIN
+        MENUITEM "Find\tALT+S",                 ID_SEARCH_FINDALT
+        MENUITEM "Find Again\tALT+L",           ID_SEARCH_FINDAGAINALT
+        MENUITEM "Replace\tALT+R",              ID_SEARCH_REPLACEALT
+        MENUITEM "Match Identifier\tALT+M",     ID_SEARCH_IDENT
+        POPUP "Case Sensitivity\tF5"
+        BEGIN
+            MENUITEM "Non-Case Sensitive Search",   ID_CASESENSITIVITYF5_CASESENSITIVESEARCH, CHECKED
+            MENUITEM "Case Sensitive Search",       ID_CASESENSITIVITYF5_NON
+        END
+        POPUP "File Searching\tF6"
+        BEGIN
+            MENUITEM "Search Current File Only",    ID_FILESEARCHINGF5_CURRENTFILEONLY, CHECKED
+            MENUITEM "Search All Loaded Files",     ID_FILESEARCHINGF5_SEARCHALLLOADEDFILES
+        END
+    END
+    POPUP "View"
+    BEGIN
+        MENUITEM "Font",                        ID_VIEW_FONT
+        POPUP "Colorizing"
+        BEGIN
+            MENUITEM "C/C++ Code",                  ID_COLORIZING_C
+            MENUITEM "HTML Code",                   ID_COLORIZING_HTMLCODE
+        END
+        MENUITEM "Whitespace",                  ID_VIEW_WHITESPACE
+        MENUITEM "Status Bar",                  ID_VIEW_STATUSBAR
+        MENUITEM "Tool Bar",                    ID_VIEW_TOOLBAR40031
+        MENUITEM SEPARATOR
+        MENUITEM "Horz Scrollbar",              ID_VIEW_HORZSCROLLBAR, CHECKED
+        MENUITEM "Vert Scrollbar",              ID_VIEW_VERTSCROLLBAR, CHECKED
+    END
+    POPUP "Tools"
+    BEGIN
+        POPUP "Sort"
+        BEGIN
+            MENUITEM "Alphabetically",              ID_SORT_ALPHABETICALLY
+            MENUITEM "Numerically",                 ID_SORT_NUMERICALLY
+            MENUITEM "Binary",                      ID_SORT_BINARY
+        END
+        POPUP "Align"
+        BEGIN
+            MENUITEM "Left Justify",                ID_ALIGN_LEFTJUSTIFY
+            MENUITEM "Right Justify",               ID_ALIGN_RIGHTJUSTIFY
+            MENUITEM "Center",                      ID_ALIGN_CENTER
+        END
+        POPUP "Convert"
+        BEGIN
+            MENUITEM "Uppercase",                   ID_CONVERT_UPPERCASE
+            MENUITEM "Lowercase",                   ID_CONVERT_LOWERCASE
+        END
+        POPUP "Code Formater"
+        BEGIN
+            MENUITEM "BSD C-Cstyle",                ID_CODEFORMATER_BSDC
+        END
+    END
+    POPUP "Help"
+    BEGIN
+        MENUITEM "Help",                        ID_HELP_HELP
+        MENUITEM "Keyboard",                    ID_HELP_KEYBOARD
+        MENUITEM "About ...",                   IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 22, 17, 219, 83
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "System", 0, 0, 0x0
+BEGIN
+    ICON            IDI_PROEDIT_GUI,IDC_MYICON,5,8,13,13
+    CTEXT           "ProEdit MP Version 2.0",IDC_STATIC,24,7,176,8,SS_NOPREFIX
+    CTEXT           "Copyright (C) 2007.  All Rights Reserved",IDC_STATIC,24,41,176,8
+    DEFPUSHBUTTON   "Ok",IDOK,81,65,58,11,WS_GROUP
+    CTEXT           "Designed/Developed/Produced by Adrian J. Michaud",IDC_STATIC,24,24,176,8
+    CTEXT           "Multi Platform Programming Editor",IDC_STATIC,24,15,176,8
+    CTEXT           "adrian@gnuxtools.com",IDC_STATIC,24,50,176,8
+END
+
+IDD_HISTORY DIALOGEX 0, 0, 359, 149
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Input History"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_HISTORY_LIST1,17,18,324,117,LBS_USETABSTOPS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    GROUPBOX        "Select an item",IDC_STATIC,10,9,335,133
+END
+
+IDD_PICKLIST DIALOGEX 0, 0, 359, 149
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Picklist"
+FONT 8, "Courier New", 400, 0, 0xFF
+BEGIN
+    LISTBOX         IDC_PICKLIST_LIST1,17,18,324,117,LBS_USETABSTOPS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    GROUPBOX        "Select an item",IDC_PICKLIST_GROUPBOX,10,9,335,133
+END
+
+IDD_QUESTION3 DIALOGEX 0, 0, 233, 65
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_CLIENTEDGE
+CAPTION "Replace Text"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "&Yes",IDC_QUESTION_BUTTON1,13,45,50,14
+    PUSHBUTTON      "&No",IDC_QUESTION_BUTTON2,66,45,50,14
+    PUSHBUTTON      "&Global",IDC_QUESTION_BUTTON3,118,45,50,14
+    CTEXT           "Replace the selected text?",IDC_QUESTION_STATIC1,17,17,208,8
+    PUSHBUTTON      "&Quit",IDC_QUESTION_BUTTON4,169,45,50,14
+END
+
+IDD_QUESTION1 DIALOGEX 0, 0, 242, 65
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_CLIENTEDGE
+CAPTION "ProEdit MP 2.0"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "&Write",IDC_QUESTION_BUTTON1,41,44,50,14,WS_GROUP
+    PUSHBUTTON      "&Abandon",IDC_QUESTION_BUTTON2,96,44,50,14
+    PUSHBUTTON      "&Quit",IDC_QUESTION_BUTTON3,151,44,50,14
+    CTEXT           "Save changes to",IDC_QUESTION_STATIC1,17,12,208,8
+    CTEXT           "",IDC_QUESTION_STATIC2,17,27,208,8
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_HISTORY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 352
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 142
+    END
+
+    IDD_PICKLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 352
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 142
+    END
+
+    IDD_QUESTION3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 225
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+
+    IDD_QUESTION1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 235
+        TOPMARGIN, 12
+        BOTTOMMARGIN, 58
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_TITLE           "Proedit MP v2.0"
+    IDC_PROEDIT_GUI         "PROEDIT_GUI"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
